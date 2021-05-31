@@ -13,8 +13,8 @@ services:
             dockerfile: dockerfile.dev
 
         volumes: 
-            -   /app/node_volumes
-            -   ./server:/app
+            - /app/node_volumes
+            - ./server:/app
 
         environment: 
             - REDIS_HOST=redis
@@ -27,7 +27,6 @@ services:
 
     client:
         build: 
-            
             - dockerfile: Dockerfile.dev
             - context: ./client
 
